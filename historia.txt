@@ -1,0 +1,2 @@
+Empezamos el proyecto de Web Scraper en base al curso de Ing. de datos.
+Fecha de inicio: 24/04/21.
