@@ -20,7 +20,7 @@ class NewsPage:
         response.raise_for_status() #mÃƒÂ©todo que arroja error si la solicitud no fue concluida correctamente 
         self._html = bs4.BeautifulSoup(response.text, 'html.parser')
 
-class HomePage(NewsPage):      #Se estÃ¡ diciendo que HomePage extiende NewsPage
+class HomePage(NewsPage):      #Se está diciendo que HomePage extiende NewsPage
     def __init__(self, news_site_uid, url):
         super().__init__(news_site_uid, url)
 

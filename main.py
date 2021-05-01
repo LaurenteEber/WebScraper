@@ -1,6 +1,6 @@
 import argparse
 import logging
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(format='%(asctime)s - %(message)s',level=logging.INFO)
 import re       #mรณdulo de expresiones regulares
 
 from requests.exceptions import HTTPError
@@ -68,15 +68,15 @@ def _build_link(host, link):
         
          
     
-if __name__ == '__main__':
-    parser = argparse.ArgumentParser()
+if __name__ == '__main__':  
+    parser = argparse.ArgumentParser(description='Scrapper News sites')
     
     news_site_choices = list(config()['news_sites'].keys())
     parser.add_argument('news_site',
                         help = 'The news site that you want to scrape',
                         type = str,
                         choices = news_site_choices)
-    print(news_site_choices)                    
+    #print(news_site_choices)                    
     args = parser.parse_args()
-    print(args.news_site)
+    #print(args.news_site)
     _news_scraper(args.news_site)
